@@ -1,0 +1,4 @@
+<div [@flipAnimation]="flipState"><h4 class="{{mirrored}}">{{caption}}</h4></div>
+<div [@flipAnimation]="flipState" (@flipAnimation.start)="onFlipStart()" (@flipAnimation.done)="onFlipEnd()"><img [src]="imgUrl" alt="notFound" class="block {{mirrored}}"/></div>
+<br>
+<button class="rounded flex items-center justify-center bg-purple-700" (click)="btnClick()">Flip!</button>
